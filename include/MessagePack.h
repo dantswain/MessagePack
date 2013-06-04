@@ -29,6 +29,8 @@
 #include <stdio.h>    /* FILE, fwrite() */
 #ifdef linux
   #include <endian.h>
+#elif defined(__APPLE__)
+  #include "MacEndian.h"
 #else
   #include <sys/endian.h>
 #endif
